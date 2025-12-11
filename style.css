@@ -1,4 +1,24 @@
+/* === BASE === */
 * {
     margin: 0;
     padding: 0;
+    font-family: var(--main-font);
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+:root {
+    --main-font: "Inter", sans-serif;
+    --main-bg: #F0C9BA;
+    --accent-color: #C04E2F;
+    --btn-bg: #CB6A58;
+    --text-main-color: #364153;
+    --text-second-color: #4A5565;
+    --title-main-color: #1E2939;
+    --text-light-color: #99A1AF;
+    --pics-color: #6A7282;
+    --icon-color: #2D2D2D;
+    --transparent-color: rgba(45, 45, 45, 0.5);
+    --stroke-color: #CAB67A;
+
 }
