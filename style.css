@@ -1,4 +1,215 @@
+/* === BASE === */
+
+:root {
+  --main-font: "Inter", sans-serif;
+  --main-bg: #f0c9ba;
+  --light-color: #ffffff;
+  --accent-color: #c04e2f;
+  --hover-accent-color: #a94529;
+  --btn-bg: #cb6a58;
+  --text-main-color: #364153;
+  --text-second-color: #4a5565;
+  --title-main-color: #1e2939;
+  --text-light-color: #99a1af;
+  --pics-color: #6a7282;
+  --icon-color: #2d2d2d;
+  --transparent-color: rgba(45, 45, 45, 0.5);
+  --stroke-color: #cab67a;
+  --main-box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: var(--main-font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--main-bg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* LOGIN PAGE */
+
+.dark-bg {
+  background: linear-gradient(#cb6a58 0%, #c16f4d 50%, var(--btn-bg) 100%);
+}
+
+.body-section {
+  width: 100%;
+  height: 100%;
+  padding-top: 198px;
+  padding-bottom: 198px;
+}
+
+.login-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  max-width: 31%;
+  margin: 0 auto;
+}
+
+.top-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--light-color);
+}
+.logo-wrapper {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  background-color: var(--light-color);
+  border: 1px solid var(--light-color);
+  border-radius: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: var(--main-box-shadow);
+}
+.title-text {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 38.4px;
+  text-transform: uppercase;
+}
+.title3-text {
+  font-size: 1rem;
+  line-height: 25.6px;
+}
+
+.form-wrapp {
+  width: calc(100% - 4rem);
+  padding: 2rem;
+  background-color: rgb(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: var(--main-box-shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input-section-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-form-lable {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5rem;
+  color: var(--text-main-color);
+}
+
+.input-field-wrap {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background-color: var(--light-color);
+}
+
+.login-form-input {
+  border: 2px solid var(--stroke-color);
+  border-radius: 16px;
+  padding: 1rem;
+  padding-left: 48px;
+  width: calc(100% - 64px);
+}
+
+.login-form-input::placeholder {
+  color: var(--transparent-color);
+  line-height: auto;
+}
+
+.input-field-wrap::before {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.input-field-wrap-mail::before {
+  content: url("./images/icon-mail.svg");
+}
+.input-field-wrap-lock::before {
+  content: url("./images/icon-lock.svg");
+}
+
+.midl-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.chckb-wrap {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.remember-chck {
+  width: 13px;
+  height: 13px;
+  border-radius: 0;
+}
+.remember-label,
+.plain-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-second-color);
+}
+.plain-text {
+  color: var(--icon-color);
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--accent-color);
+  text-transform: uppercase;
+  color: var(--light-color);
+  padding: 1rem 0;
+  margin: 0 auto;
+  border: 0.1px solid transparent;
+  border-radius: 1rem;
+  font-weight: bolder;
+  font-size: 15px;
+  line-height: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.btn-submit:hover {
+    background-color: var(--hover-accent-color);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 10px -1px rgba(0,0,0,0.15), 0 4px 6px -2px rgba(0,0,0,0.1);
+  }
+
+.btm-text {
+  color: var(--text-second-color);
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+}
+.sign-link:hover{
+color: var(--title-main-color);
+font-weight: 500;
 }
