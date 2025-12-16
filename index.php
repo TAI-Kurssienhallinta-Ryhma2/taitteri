@@ -59,7 +59,7 @@
 
                 <button type="submit" class="btn-submit">Sign In</button>
 
-                <p class="btm-text">Don't have an account? <span><a href="#" class="sign-link">Sign up</a></span></p>
+                <p class="btm-text">Don't have an account? <span><a href="register.php" class="sign-link">Sign up</a></span></p>
             </div>
         </div>
     </section>
