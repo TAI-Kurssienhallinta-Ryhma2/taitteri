@@ -57,7 +57,8 @@
                     <p class="plain-text">Forgot password?</p>
                 </div>
 
-                <button type="submit" class="btn-submit">Sign In</button>
+                <button type="submit" class="btn-submit" id = "loginButton">Sign In</button>
+                <label id = "messageStatus"></label>
 
                 <p class="btm-text">Don't have an account? <span><a href="register.php" class="sign-link">Sign up</a></span></p>
             </div>
@@ -65,7 +66,7 @@
     </section>
 
 
-
+<script src = "index.js"></script>
 </body>
 
 </html>

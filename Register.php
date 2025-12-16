@@ -11,10 +11,6 @@
     <h4>The registration process it's at least 15 seconds!!</h4>
     <form id = "registerForm">
         <div>
-            <label for = "username">Username: </label>
-            <input type = "text" id = "username" name = "username" required>
-        </div>
-        <div>
             <label for = "email">Email: </label>
             <input type = "email" id = "email" name = "email" required>
         </div>

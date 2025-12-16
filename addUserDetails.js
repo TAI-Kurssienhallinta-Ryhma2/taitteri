@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }).then(rawData => rawData.json());
 
         if(data.status == "ok") {
-            window.location.href = `mainPage.php?user_id=${user_id}`;
+            window.location.href = "index.php";
         }
     })
 });

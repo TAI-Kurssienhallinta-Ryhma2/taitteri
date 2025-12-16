@@ -6,17 +6,15 @@ if($_SERVER["REQUEST_METHOD"] != "POST") {
 
 // $data = json_decode(file_get_contents("php://input"))->formData;
 
-$username = $_POST["username"];
 $email = $_POST["email"];
 $originalPassword = $_POST["password"];
 
 try {
-    $query = "INSERT INTO kayttajat_logins(username, email, hashed_password)
-                  VALUES(:username, :email, :hashed_password)";
+    $query = "INSERT INTO kayttajat_logins(email, hashed_password)
+                  VALUES(:email, :hashed_password)";
     $hashed_password = password_hash($originalPassword, PASSWORD_DEFAULT);
     $statement = $conn->prepare($query);
     $statement->execute([
-        ":username" => $username,
         ":email" => $email,
         ":hashed_password" => $hashed_password
     ]);
