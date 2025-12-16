@@ -21,9 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }).then(rawData => rawData.json());
 
         if(data.status == "ok") {
-            document.getElementById("username").value = "";
-            document.getElementById("password").value = "";
-            document.getElementById("statusMessage").innerText = data.message;
+            window.location.href = `addUserDetails.php?user_id=${data.user_id}`;
         } else {
             document.getElementById("statusMessage").innerText = data.message;
         }
