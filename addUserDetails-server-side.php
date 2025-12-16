@@ -22,6 +22,7 @@ try {
     http_response_code(200);
     echo json_encode(["message" => "Personal details updated successfully", "status" => "ok"]);
 } catch(PDOException $e) {
+    header("Content-type: application/json");
     http_response_code(500);
     echo json_encode(["message" => "Database error", "status" => "error"]);
 }

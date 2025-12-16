@@ -1,5 +1,9 @@
 <?php
+
+session_start();
+
 require_once "connection.php";
+
 if($_SERVER["REQUEST_METHOD"] != "POST") {
      echo json_encode(["message" => "Use POST instead of GET method", "status" => "error"]);
 }
@@ -15,6 +19,9 @@ try {
     ]);
     $result = $statement->fetch(PDO::FETCH_ASSOC);
     if($result && password_verify($originalPassword, $result["hashed_password"])) {
+        $_SESSION["user_id"] = $result["kayttajan_id"];
+        $_SESSION["logged_in"] = true;
+
         header("Content-type: application/json");
         http_response_code(200);
         echo json_encode(["message" => "User logged in successfully", "status" => "ok", "user_id" => $result["kayttajan_id"]]);
